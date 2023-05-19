@@ -1,5 +1,13 @@
 # Project Changelog
 
+## [1.0.5-beta.1](https://github.com/StephanGerbeth/paralogs/compare/v1.0.4...v1.0.5-beta.1) (2023-05-19)
+
+
+### Bug Fixes
+
+* **sonar:** added report declaration ([cd977f3](https://github.com/StephanGerbeth/paralogs/commit/cd977f334d1e457d4d845f4cd96bf1c50649f728))
+* **sonar:** removed report.json declaration ([45cc4f9](https://github.com/StephanGerbeth/paralogs/commit/45cc4f9446998c2c4626ae48a9eb73fc13701be4))
+
 ## [1.0.4](https://github.com/StephanGerbeth/paralogs/compare/v1.0.3...v1.0.4) (2023-05-19)
 
 
