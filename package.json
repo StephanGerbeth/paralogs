@@ -3,7 +3,7 @@
   "version": "1.0.0-beta.3",
   "private": true,
   "scripts": {
-    "pre-commit": "npm run --workspace packages/** pre-commit",
+    "pre-commit": "npm run --workspaces pre-commit",
     "prepare": "husky install"
   },
   "devDependencies": {
