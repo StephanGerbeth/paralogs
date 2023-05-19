@@ -3,7 +3,8 @@
   "version": "1.0.0-beta.2",
   "private": true,
   "scripts": {
-    "postinstall": "husky install"
+    "pre-commit": "npm run --workspace packages/** pre-commit",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.21.3",
@@ -12,6 +13,7 @@
     "commitlint": "17.6.1",
     "eslint": "8.39.0",
     "eslint-config-prettier": "^8.8.0",
+    "eslint-formatter-json-relative": "^0.1.0",
     "eslint-plugin-no-secrets": "0.8.9",
     "eslint-plugin-no-unsanitized": "4.0.2",
     "eslint-plugin-prettier": "^4.2.1",
