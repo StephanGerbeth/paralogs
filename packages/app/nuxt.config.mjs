@@ -31,7 +31,7 @@ export default defineNuxtConfig(async () => {
     },
 
     app: {
-      baseUrl: getBaseUrl()
+      baseURL: getBaseUrl()
     },
 
     css: [],
