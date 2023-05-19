@@ -8,6 +8,7 @@ import * as postcssFunctions from './postcss/functions';
 const isDev = process.env.NODE_ENV === 'development';
 
 export default defineNuxtConfig(async () => {
+  console.log(readPackage);
   const pkg = await readPackage({ cwd: resolve(process.cwd(), '../..') });
 
   return {
