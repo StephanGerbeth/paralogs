@@ -1,0 +1,1 @@
+import{a as s,b as e,r as n,o,__tla as _}from"./entry.d88639a3.js";let t,u=Promise.all([(()=>{try{return _}catch{}})()]).then(async()=>{const a={};function l(r,c,d,f,i,m){return o(),e("div",null,[n(r.$slots,"default")])}t=s(a,[["render",l]])});export{u as __tla,t as default};

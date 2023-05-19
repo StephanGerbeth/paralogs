@@ -1,0 +1,1 @@
+import{a as l,b as s,o,__tla as _}from"./entry.d88639a3.js";let a,c=Promise.all([(()=>{try{return _}catch{}})()]).then(async()=>{const t={},e={class:"app"};function r(n,d){return o(),s("div",e,"hello world 123")}a=l(t,[["render",r],["__scopeId","data-v-ca31696d"]])});export{c as __tla,a as default};
