@@ -85,6 +85,8 @@ jobs:
       - name: Build
         run: |
           npm run generate --workspace=@paralogs/app
+        env:
+          BASE_URL: /paralogs/
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
