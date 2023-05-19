@@ -10,6 +10,7 @@
     "lint": "npm run lint:es && npm run lint:css",
     "lint:es": "eslint --ext .js,.mjs,.vue .",
     "lint:css": "stylelint \"**/*.vue\"",
+    "lint:report": "eslint --ext .js,.vue -f json-relative -o ./eslint-report.json .",
     "pre-commit": "npx --no-install lint-staged"
   },
   "devDependencies": {
