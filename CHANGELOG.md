@@ -1,5 +1,17 @@
 # Project Changelog
 
+# [1.0.0-beta.3](https://github.com/StephanGerbeth/paralogs/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2023-05-19)
+
+
+### Bug Fixes
+
+* **package:** added script call ([9d60b0f](https://github.com/StephanGerbeth/paralogs/commit/9d60b0f38cab185a27d0e4435c523dd2436d2576))
+* **sonar:** added correct credentials ([00e8dee](https://github.com/StephanGerbeth/paralogs/commit/00e8deed48da64ccd9b19b706d9a2709dfb1e549))
+* **sonar:** added eslint json formatter ([92ca111](https://github.com/StephanGerbeth/paralogs/commit/92ca1119a45fd02361c81f014ce6783f1491c431))
+* **sonar:** fix organisation ([352a252](https://github.com/StephanGerbeth/paralogs/commit/352a252cb5ce98df3350fff1fe9fd87af7d975cb))
+* **sonar:** updated workflow config ([63652a7](https://github.com/StephanGerbeth/paralogs/commit/63652a771177614735a0c4354f7e8dcb3314cd85))
+* **test:** test ([566f774](https://github.com/StephanGerbeth/paralogs/commit/566f774f55d017ebaa8a76ca6ce0846d9ae4eca6))
+
 # [1.0.0-beta.2](https://github.com/StephanGerbeth/paralogs/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2023-05-19)
 
 
