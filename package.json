@@ -3,7 +3,8 @@
   "version": "1.0.0-beta.2",
   "private": true,
   "scripts": {
-    "postinstall": "husky install"
+    "pre-commit": "npm run --workspace packages/** pre-commit",
+    "prepare": "husky install"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.21.3",

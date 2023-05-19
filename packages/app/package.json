@@ -9,7 +9,8 @@
     "postinstall": "nuxt prepare",
     "lint": "npm run lint:es && npm run lint:css",
     "lint:es": "eslint --ext .js,.mjs,.vue .",
-    "lint:css": "stylelint \"**/*.vue\""
+    "lint:css": "stylelint \"**/*.vue\"",
+    "pre-commit": "npx --no-install lint-staged"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "12.0.0",
