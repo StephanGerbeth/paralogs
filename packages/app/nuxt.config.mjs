@@ -94,5 +94,7 @@ function getHost() {
 }
 
 function getPort() {
-  return process.env.npm_config_port || process.env.PORT || 8050;
+  return (
+    Number(process.env.npm_config_port) || Number(process.env.PORT) || 8050
+  );
 }
