@@ -1,6 +1,28 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "@nuxtjs"
+  ],
+  "baseBranches": [
+    "beta"
+  ],
+  "rangeStrategy": "pin",
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "snyk"
+      ],
+      "groupName": "snyk"
+    },
+    {
+      "packageNames": [
+        "node"
+      ],
+      "major": {
+        "enabled": true
+      },
+      "separateMultipleMajor": true,
+      "allowedVersions": "^19"
+    }
   ]
 }
