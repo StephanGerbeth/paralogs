@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.2](https://github.com/StephanGerbeth/paralogs/compare/v1.0.1...v1.0.2) (2023-05-19)
+
+
+### Bug Fixes
+
+* **config:** fixed readPkg ([a4def67](https://github.com/StephanGerbeth/paralogs/commit/a4def675ba369b8b560a3a40c582ebaa28420cb2))
+
 ## [1.0.2-beta.1](https://github.com/StephanGerbeth/paralogs/compare/v1.0.1...v1.0.2-beta.1) (2023-05-19)
 
 
