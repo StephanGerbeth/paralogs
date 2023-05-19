@@ -54,6 +54,7 @@ jobs:
           args: >
             -Dsonar.organization=stephangerbeth
             -Dsonar.projectKey=stephangerbeth_paralogs
+            -Dsonar.eslint.reportPaths=./packages/app/eslint-report.json
             -Dsonar.projectVersion=${{ steps.package-version.outputs.current-version}}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
