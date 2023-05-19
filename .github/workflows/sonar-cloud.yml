@@ -42,7 +42,7 @@ jobs:
         run: npm ci
 
       - name: Lint (Report Generate)
-        run: npm run lint:report
+        run: npm run lint:report --workspace=@paralogs/app
 
       - name: get-npm-version
         id: package-version
