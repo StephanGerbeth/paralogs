@@ -1,0 +1,44 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug (dev)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeVersion": "19.5.0",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--workspace=@banner-erzeuger-3000/frontend"
+      ]
+    },
+    {
+      "name": "Debug (build)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeVersion": "19.5.0",
+      "runtimeArgs": [
+        "run",
+        "build",
+        "--workspace=@banner-erzeuger-3000/frontend"
+      ]
+    },
+    {
+      "name": "Debug (start)",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "npm",
+      "runtimeVersion": "19.5.0",
+      "runtimeArgs": [
+        "run",
+        "start",
+        "--workspace=@banner-erzeuger-3000/frontend"
+      ]
+    }
+  ]
+}
