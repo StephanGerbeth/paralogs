@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.4](https://github.com/StephanGerbeth/paralogs/compare/v1.0.3...v1.0.4) (2023-05-19)
+
+
+### Bug Fixes
+
+* **prettier:** added separate config ([71eda38](https://github.com/StephanGerbeth/paralogs/commit/71eda38b616a6444f6a9cb6e6ab51e4ddd87070c))
+
 ## [1.0.4-beta.1](https://github.com/StephanGerbeth/paralogs/compare/v1.0.3...v1.0.4-beta.1) (2023-05-19)
 
 
