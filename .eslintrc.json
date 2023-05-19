@@ -1,0 +1,59 @@
+{
+  "root": true,
+  "parserOptions": {
+    "parser": "@babel/eslint-parser",
+    "sourceType": "module",
+    "requireConfigFile": false
+  },
+  "extends": [
+    "@nuxtjs",
+    "plugin:security/recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:no-unsanitized/DOM",
+    "prettier"
+  ],
+  "plugins": [
+    "no-secrets",
+    "xss",
+    "prettier"
+  ],
+  "rules": {
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "semi": [
+      2,
+      "always"
+    ],
+    "prettier/prettier": [
+      "warn",
+      {
+        "arrowParens": "avoid",
+        "bracketSameLine": true,
+        "trailingComma": "none",
+        "singleQuote": true,
+        "semi": true
+      }
+    ],
+    "vue/multi-word-component-names": "off",
+    "complexity": [
+      "error",
+      {
+        "max": 7
+      }
+    ],
+    "vue/component-name-in-template-casing": [
+      "error",
+      "kebab-case",
+      {
+        "registeredComponentsOnly": true,
+        "ignores": []
+      }
+    ],
+    "sonarjs/no-duplicate-string": "off"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "extends": [
+    "stylelint-config-recommended-vue",
+    "stylelint-config-standard",
+    "stylelint-config-recess-order",
+    "stylelint-config-css-modules"
+  ],
+  "rules": {
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": [
+          "em",
+          "vw",
+          "deep",
+          "global"
+        ]
+      }
+    ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "global",
+          "deep"
+        ]
+      }
+    ],
+    "no-descending-specificity": null
+  }
+}
