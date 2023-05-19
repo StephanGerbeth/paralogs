@@ -9,6 +9,8 @@ const isDev = process.env.NODE_ENV === 'development';
 
 export default defineNuxtConfig(async () => {
   console.log(readPackage);
+  const test = await import('read-pkg');
+  console.log(test);
   const pkg = await readPackage({ cwd: resolve(process.cwd(), '../..') });
 
   return {
@@ -26,7 +28,7 @@ export default defineNuxtConfig(async () => {
     runtimeConfig: {
       public: {
         name: pkg.name,
-        version: process.env.RELEASE_VERSION || pkg.version || 'NA'
+        version: process.env.nextRelease || pkg.version || 'NA'
       }
     },
 
