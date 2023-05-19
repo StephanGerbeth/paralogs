@@ -1,12 +1,5 @@
 # Project Changelog
 
-## [1.0.6](https://github.com/StephanGerbeth/paralogs/compare/v1.0.5...v1.0.6) (2023-05-19)
-
-
-### Bug Fixes
-
-* **sonar:** fixed code smells ([167191b](https://github.com/StephanGerbeth/paralogs/commit/167191ba5d3766abd81f2c3009b4ddcf9608e8d3))
-
 ## [1.0.6-beta.1](https://github.com/StephanGerbeth/paralogs/compare/v1.0.5...v1.0.6-beta.1) (2023-05-19)
 
 
