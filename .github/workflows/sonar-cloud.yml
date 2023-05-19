@@ -52,7 +52,7 @@ jobs:
         uses: sonarsource/sonarcloud-github-action@master
         with:
           args: >
-            -Dsonar.organization=StephanGerbeth
+            -Dsonar.organization=stephangerbeth
             -Dsonar.projectKey=stephangerbeth_paralogs
             -Dsonar.eslint.reportPaths=eslint-report.json
             -Dsonar.projectVersion=${{ steps.package-version.outputs.current-version}}
