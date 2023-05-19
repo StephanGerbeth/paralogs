@@ -1,5 +1,12 @@
 # Project Changelog
 
+# [1.0.0-beta.4](https://github.com/StephanGerbeth/paralogs/compare/v1.0.0-beta.3...v1.0.0-beta.4) (2023-05-19)
+
+
+### Bug Fixes
+
+* **action:** edited main workflow ([08c918a](https://github.com/StephanGerbeth/paralogs/commit/08c918a7792fa15f6baec01d35b991875fe9ca1a))
+
 # [1.0.0-beta.3](https://github.com/StephanGerbeth/paralogs/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2023-05-19)
 
 
