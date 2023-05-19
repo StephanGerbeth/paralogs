@@ -1,5 +1,6 @@
 # Project Changelog
 
+
 ## [1.0.5-beta.2](https://github.com/StephanGerbeth/paralogs/compare/v1.0.5-beta.1...v1.0.5-beta.2) (2023-05-19)
 
 
