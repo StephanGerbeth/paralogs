@@ -2,13 +2,15 @@ import { defineNuxtConfig } from 'nuxt/config';
 import { resolve } from 'pathe';
 import svgLoader from 'vite-svg-loader';
 import topLevelAwait from 'vite-plugin-top-level-await';
-import { readPackage } from 'read-pkg';
 import * as postcssFunctions from './postcss/functions';
 
 const isDev = process.env.NODE_ENV === 'development';
 
 export default defineNuxtConfig(async () => {
-  const pkg = await readPackage({ cwd: resolve(process.cwd(), '../..') });
+  const readPackage = await import('read-pkg');
+  const pkg = (readPackage.readPackage || readPackage)({
+    cwd: resolve(process.cwd(), '../..')
+  });
 
   return {
     sourcemap: { server: true, client: false },
@@ -25,12 +27,12 @@ export default defineNuxtConfig(async () => {
     runtimeConfig: {
       public: {
         name: pkg.name,
-        version: process.env.RELEASE_VERSION || pkg.version || 'NA'
+        version: process.env.nextRelease || pkg.version || 'NA'
       }
     },
 
     app: {
-      baseUrl: getBaseUrl()
+      baseURL: getBaseUrl()
     },
 
     css: [],
