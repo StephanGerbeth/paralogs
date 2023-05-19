@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.1-beta.1](https://github.com/StephanGerbeth/paralogs/compare/v1.0.0...v1.0.1-beta.1) (2023-05-19)
+
+
+### Bug Fixes
+
+* **package:** updated lock ([b4e20d5](https://github.com/StephanGerbeth/paralogs/commit/b4e20d551184d503a2ec491455a8af5441b4c1ec))
+
 # 1.0.0 (2023-05-19)
 
 
