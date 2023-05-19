@@ -7,6 +7,10 @@
     "beta"
   ],
   "rangeStrategy": "pin",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
   "packageRules": [
     {
       "packagePatterns": [
@@ -23,6 +27,24 @@
       },
       "separateMultipleMajor": true,
       "allowedVersions": "^19"
+    },
+    {
+      "matchDepTypes": [
+        "devDependencies"
+      ],
+      "matchPackagePatterns": [
+        "lint",
+        "prettier"
+      ],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
     }
   ]
 }
