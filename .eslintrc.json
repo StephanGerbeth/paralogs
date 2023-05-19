@@ -29,16 +29,7 @@
       2,
       "always"
     ],
-    "prettier/prettier": [
-      "warn",
-      {
-        "arrowParens": "avoid",
-        "bracketSameLine": true,
-        "trailingComma": "none",
-        "singleQuote": true,
-        "semi": true
-      }
-    ],
+    "prettier/prettier": "error",
     "vue/multi-word-component-names": "off",
     "complexity": [
       "error",
