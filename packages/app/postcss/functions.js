@@ -17,6 +17,6 @@ const resolveValue = value => {
   if (value.endsWith('value')) {
     return parseInt(value);
   } else {
-    return String(value).replace('calc', '').replace('px', '');
+    return Number(String(value).replace('calc', '').replace('px', ''));
   }
 };
