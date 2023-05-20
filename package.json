@@ -12,7 +12,7 @@
     "@nuxt/test-utils": "^3.5.1",
     "branch-name-lint": "2.1.1",
     "commitlint": "17.6.3",
-    "eslint": "8.40.0",
+    "eslint": "8.41.0",
     "eslint-config-prettier": "8.8.0",
     "eslint-formatter-json-relative": "0.1.0",
     "eslint-plugin-no-secrets": "0.8.9",
