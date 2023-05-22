@@ -1,5 +1,13 @@
 # Project Changelog
 
+## [1.0.7-beta.1](https://github.com/StephanGerbeth/paralogs/compare/v1.0.6...v1.0.7-beta.1) (2023-05-22)
+
+
+### Bug Fixes
+
+* **package:** added package-lock ([eed92b6](https://github.com/StephanGerbeth/paralogs/commit/eed92b68f6ae0bf98185ffe656a447f194227d22))
+* **restore:** fixed branch ([0466709](https://github.com/StephanGerbeth/paralogs/commit/04667090a7e850566483e9a6a3598cbd646db3d8))
+
 ## [1.0.6](https://github.com/StephanGerbeth/paralogs/compare/v1.0.5...v1.0.6) (2023-05-19)
 
 
