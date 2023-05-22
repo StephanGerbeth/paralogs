@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config';
+import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill';
 import { resolve } from 'pathe';
 import svgLoader from 'vite-svg-loader';
 import topLevelAwait from 'vite-plugin-top-level-await';
@@ -21,7 +22,8 @@ export default defineNuxtConfig(async () => {
 
     alias: {
       '#root': resolve(__dirname, '../..'),
-      '#packages': resolve(__dirname, '../')
+      '#packages': resolve(__dirname, '../'),
+      '#lib': resolve(__dirname, '../lib/src/')
     },
 
     runtimeConfig: {
@@ -47,7 +49,15 @@ export default defineNuxtConfig(async () => {
           defaultImport: 'component' // or 'raw'
         }),
         topLevelAwait()
-      ]
+      ],
+      optimizeDeps: {
+        esbuildOptions: {
+          define: {
+            global: 'globalThis'
+          },
+          plugins: [NodeGlobalsPolyfillPlugin()]
+        }
+      }
     },
 
     devServer: {

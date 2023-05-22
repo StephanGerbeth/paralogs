@@ -45,6 +45,7 @@
         "ignores": []
       }
     ],
-    "sonarjs/no-duplicate-string": "off"
+    "sonarjs/no-duplicate-string": "off",
+    "require-await": "off"
   }
 }
