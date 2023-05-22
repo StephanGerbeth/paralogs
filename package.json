@@ -9,6 +9,7 @@
   "devDependencies": {
     "@babel/eslint-parser": "7.21.8",
     "@commitlint/config-conventional": "17.6.3",
+    "@nuxt/test-utils": "^3.5.1",
     "branch-name-lint": "2.1.1",
     "commitlint": "17.6.3",
     "eslint": "8.40.0",
@@ -29,9 +30,14 @@
     "stylelint-config-css-modules": "4.2.0",
     "stylelint-config-recess-order": "4.0.0",
     "stylelint-config-recommended-vue": "1.4.0",
-    "stylelint-config-standard": "33.0.0"
+    "stylelint-config-standard": "33.0.0",
+    "vitest": "^0.31.1"
   },
   "workspaces": [
     "./packages/*"
-  ]
+  ],
+  "dependencies": {
+    "@unlock-protocol/unlock-js": "^0.37.2",
+    "buffer": "^6.0.3"
+  }
 }
