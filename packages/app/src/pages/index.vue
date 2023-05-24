@@ -1,15 +1,21 @@
 <template>
   <div class="app">
+    <v-btn>hello</v-btn>
     hello world 123
     <a :href="url">Checkout</a>
   </div>
 </template>
 
 <script>
+import { definePageMeta } from 'nuxt/app';
 import { LocksmithService } from '@unlock-protocol/unlock-js';
 
 export default {
   setup() {
+    definePageMeta({
+      middleware: ['magic-auth']
+    });
+
     const config = {
       network: 80001,
       // locks: {
