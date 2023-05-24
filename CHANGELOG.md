@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.7-beta.2](https://github.com/StephanGerbeth/paralogs/compare/v1.0.7-beta.1...v1.0.7-beta.2) (2023-05-24)
+
+
+### Bug Fixes
+
+* **magic:** basic implementation ([eb64877](https://github.com/StephanGerbeth/paralogs/commit/eb64877dc7f5ccd99a92e2bf4a28887adb933aec))
+
 ## [1.0.7-beta.1](https://github.com/StephanGerbeth/paralogs/compare/v1.0.6...v1.0.7-beta.1) (2023-05-22)
 
 
