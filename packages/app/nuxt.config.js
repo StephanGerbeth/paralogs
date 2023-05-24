@@ -1,9 +1,13 @@
 import { defineNuxtConfig } from 'nuxt/config';
 import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill';
+import dotenv from 'dotenv-mono';
+import vuetify from 'vite-plugin-vuetify';
 import { resolve } from 'pathe';
 import svgLoader from 'vite-svg-loader';
 import topLevelAwait from 'vite-plugin-top-level-await';
 import * as postcssFunctions from './postcss/functions';
+
+dotenv.config();
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -29,7 +33,9 @@ export default defineNuxtConfig(async () => {
     runtimeConfig: {
       public: {
         name: pkg.name,
-        version: process.env.nextRelease || pkg.version || 'NA'
+        version: process.env.nextRelease || pkg.version || 'NA',
+        NUXT_ENV_MAGIC_PUBLISHABLE_KEY:
+          process.env.NUXT_ENV_MAGIC_PUBLISHABLE_KEY
       }
     },
 
@@ -37,10 +43,14 @@ export default defineNuxtConfig(async () => {
       baseURL: getBaseUrl()
     },
 
-    css: [],
+    imports: {
+      dirs: ['store']
+    },
+
+    css: ['vuetify/lib/styles/main.css'],
 
     build: {
-      transpile: ['rxjs']
+      transpile: ['rxjs', 'vuetify']
     },
 
     vite: {
@@ -65,7 +75,16 @@ export default defineNuxtConfig(async () => {
       host: getHost()
     },
 
-    modules: ['@nuxtjs/fontaine'],
+    modules: [
+      '@pinia/nuxt',
+      '@pinia-plugin-persistedstate/nuxt',
+      '@nuxtjs/fontaine',
+      async (options, nuxt) => {
+        nuxt.hooks.hook('vite:extendConfig', config =>
+          config.plugins.push(vuetify())
+        );
+      }
+    ],
 
     postcss: {
       plugins: {

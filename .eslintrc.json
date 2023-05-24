@@ -3,16 +3,23 @@
   "parserOptions": {
     "parser": "@babel/eslint-parser",
     "sourceType": "module",
-    "requireConfigFile": false
+    "requireConfigFile": false,
+    "babelOptons": {
+      "plugins": [
+        "@babel/plugin-syntax-import-assertions"
+      ]
+    }
   },
   "extends": [
     "@nuxtjs",
+    "plugin:nuxt/recommended",
     "plugin:security/recommended",
     "plugin:sonarjs/recommended",
     "plugin:no-unsanitized/DOM",
     "prettier"
   ],
   "plugins": [
+    "vitest",
     "no-secrets",
     "xss",
     "prettier"
