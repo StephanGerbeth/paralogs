@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import { definePageMeta } from 'nuxt/app';
 import { LocksmithService } from '@unlock-protocol/unlock-js';
+import { definePageMeta } from '#imports';
 
 export default {
   setup() {

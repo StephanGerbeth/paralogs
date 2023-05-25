@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { definePageMeta } from 'nuxt/app';
+import { definePageMeta } from '#imports';
 
 export default {
   setup() {

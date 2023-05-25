@@ -27,7 +27,8 @@ export default defineNuxtConfig(async () => {
     alias: {
       '#root': resolve(__dirname, '../..'),
       '#packages': resolve(__dirname, '../'),
-      '#lib': resolve(__dirname, '../lib/src/')
+      '#lib': resolve(__dirname, '../lib/src/'),
+      '#imports': './.nuxt/imports.d.ts'
     },
 
     runtimeConfig: {
