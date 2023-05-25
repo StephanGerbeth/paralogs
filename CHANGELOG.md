@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.7-beta.3](https://github.com/StephanGerbeth/paralogs/compare/v1.0.7-beta.2...v1.0.7-beta.3) (2023-05-25)
+
+
+### Bug Fixes
+
+* **magic:** nuxt auth integration ([ae0e0cf](https://github.com/StephanGerbeth/paralogs/commit/ae0e0cf75fb3cfab901ef9aba7666f2bf3f24166))
+
 ## [1.0.7-beta.2](https://github.com/StephanGerbeth/paralogs/compare/v1.0.7-beta.1...v1.0.7-beta.2) (2023-05-24)
 
 
