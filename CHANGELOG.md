@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.7-beta.4](https://github.com/StephanGerbeth/paralogs/compare/v1.0.7-beta.3...v1.0.7-beta.4) (2023-05-27)
+
+
+### Bug Fixes
+
+* **auth:** integrated auth gateway ([89abaa2](https://github.com/StephanGerbeth/paralogs/commit/89abaa2e6cbe9e343735c3564669a7d3099547fe))
+
 ## [1.0.7-beta.3](https://github.com/StephanGerbeth/paralogs/compare/v1.0.7-beta.2...v1.0.7-beta.3) (2023-05-25)
 
 
