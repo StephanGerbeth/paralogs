@@ -1,20 +1,22 @@
 <template>
   <div>
-    <h1>LOGIN</h1>
-    <form-login></form-login>
+    <login-mask></login-mask>
   </div>
 </template>
 
 <script>
-import FormLogin from '@/components/collections/FormLogin.vue';
+import { definePageMeta } from '#imports';
+import LoginMask from '@/components/modules/LoginMask.vue';
 
 export default {
   components: {
-    FormLogin
+    LoginMask
   },
 
-  mounted() {
-    console.log(this);
+  setup() {
+    definePageMeta({
+      middleware: ['auth']
+    });
   }
 };
 </script>
