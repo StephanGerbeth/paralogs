@@ -13,7 +13,7 @@ import { definePageMeta } from '#imports';
 export default {
   setup() {
     definePageMeta({
-      middleware: ['magic-auth']
+      middleware: ['auth']
     });
 
     const config = {

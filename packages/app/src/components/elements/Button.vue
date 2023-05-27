@@ -1,3 +1,3 @@
 <template>
-  <v-btn>hello</v-btn>
+  <v-btn><slot /></v-btn>
 </template>

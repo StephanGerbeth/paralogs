@@ -1,11 +1,22 @@
 <template>
-  <div>
-    <slot />
-  </div>
+  <v-layout>
+    <v-app-bar title="Application bar">
+      <page-header></page-header>
+    </v-app-bar>
+    <v-main>
+      <slot />
+    </v-main>
+  </v-layout>
 </template>
 
 <script>
-export default {};
+import PageHeader from '@/components/modules/PageHeader.vue';
+
+export default {
+  components: {
+    PageHeader
+  }
+};
 </script>
 
 <style lang="postcss">

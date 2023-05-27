@@ -1,5 +1,9 @@
 <template>
   <NuxtLayout>
-    <NuxtPage />
+    <Suspense>
+      <NuxtPage />
+
+      <template #fallback> LOOOOOOADING </template>
+    </Suspense>
   </NuxtLayout>
 </template>

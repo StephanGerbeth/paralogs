@@ -7,7 +7,7 @@
 
 <script>
 // import { createDynamicModelObject } from '@/utils/setup';
-import { useMagicStore } from '@/store/magic';
+import { useAuthStore } from '@/store/auth';
 import InputEmail from '@/components/elements/InputEmail.vue';
 import ElementButton from '@/components/elements/Button.vue';
 
@@ -36,17 +36,13 @@ export default {
 
   methods: {
     async onSubmit() {
-      const magic = useMagicStore();
-      try {
-        this.$emit('progress', {
-          complete: magic.loginWithEmail({
-            email: this.model.email
-          }),
-          model: this.model
-        });
-      } catch (e) {
-        console.log(e);
-      }
+      const auth = useAuthStore();
+      this.$emit('progress', {
+        complete: auth.loginWithEmail({
+          email: this.model.email
+        }),
+        model: this.model
+      });
     }
   }
 };
