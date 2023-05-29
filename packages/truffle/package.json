@@ -2,7 +2,6 @@
   "name": "@paralogs/truffle",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -10,9 +9,9 @@
   "scripts": {
     "dev": "npx truffle develop",
     "compile": "npx truffle compile",
-    "migrate": "npx truffle migrate --network alfajores",
+    "migrate": "npx truffle migrate --network mumbai",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c --bundleConfigAsCjs && node ./scripts/defender/upload.mjs"
+    "deploy": "npx thirdweb deploy"
   },
   "author": "",
   "license": "ISC",
@@ -23,7 +22,8 @@
     "@openzeppelin/contracts-ethereum-package": "3.0.0",
     "@openzeppelin/test-helpers": "0.5.16",
     "@thirdweb-dev/sdk": "3.10.17",
-    "@unlock-protocol/contracts": "0.0.22",
+    "@truffle/hdwallet-provider": "^2.1.11",
+    "@unlock-protocol/contracts": "^0.0.22",
     "date-fns": "2.30.0",
     "eth-sig-util": "3.0.1",
     "rollup-plugin-dotenv": "0.4.1",
@@ -35,7 +35,9 @@
     "@rollup/plugin-node-resolve": "15.0.2",
     "builtin-modules": "3.3.0",
     "defender-autotask-client": "1.44.0",
+    "eslint-plugin-truffle": "^0.3.1",
     "ethers": "5.7.2",
-    "rollup": "3.23.0"
+    "rollup": "3.23.0",
+    "solhint": "^3.4.1"
   }
 }

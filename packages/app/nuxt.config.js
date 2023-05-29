@@ -35,8 +35,9 @@ export default defineNuxtConfig(async () => {
       public: {
         name: pkg.name,
         version: process.env.nextRelease || pkg.version || 'NA',
-        NUXT_ENV_MAGIC_PUBLISHABLE_KEY:
-          process.env.NUXT_ENV_MAGIC_PUBLISHABLE_KEY
+        MAGIC_PUBLISHABLE_KEY: process.env.MAGIC_PUBLISHABLE_KEY,
+        CHAIN_ID: process.env.CHAIN_ID,
+        GRAPHQL_API_URL: process.env.GRAPHQL_API_URL
       }
     },
 
@@ -45,13 +46,13 @@ export default defineNuxtConfig(async () => {
     },
 
     imports: {
-      dirs: ['store']
+      dirs: ['store', 'composables']
     },
 
     css: ['vuetify/lib/styles/main.css'],
 
     build: {
-      transpile: ['rxjs', 'vuetify']
+      transpile: ['rxjs', 'vuetify', '@urql/vue']
     },
 
     vite: {

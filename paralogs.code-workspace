@@ -22,6 +22,10 @@
       "vue",
       "html"
     ],
+    "solidity.packageDefaultDependenciesDirectory": "./node_modules",
+    "solidity.remappingsUnix": [
+      "@unlock-protocol/=../../node_modules/@unlock-protocol/"
+    ],
     "stylelint.validate": [
       "css",
       "less",
@@ -65,7 +69,9 @@
       "@@": "${workspaceRoot}packages/app"
     },
     "window.title": "${dirty} ${activeEditorMedium}${separator}${rootName}",
-    "workbench.settings.enableNaturalLanguageSearch": false
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "solidity.compileUsingRemoteVersion": "latest",
+    "solidity.defaultCompiler": "localNodeModule"
   },
   "extensions": {
     "recommendations": [
