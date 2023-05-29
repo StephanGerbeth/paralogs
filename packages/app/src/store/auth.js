@@ -1,5 +1,5 @@
 import { defineStore, acceptHMRUpdate } from 'pinia';
-import { useNuxtApp, navigateTo } from '#app';
+import { useNuxtApp, navigateTo, useRuntimeConfig } from '#app';
 
 export const useAuthStore = defineStore('auth', {
   state: () => {
@@ -12,28 +12,32 @@ export const useAuthStore = defineStore('auth', {
   actions: {
     async loginWithEmail(options) {
       const nuxtApp = useNuxtApp();
-      await nuxtApp.$sdk.connect(options);
-      const magicSDK = await nuxtApp.$sdk.getMagic();
+      const config = useRuntimeConfig();
+      await nuxtApp.$wallet.connect({
+        ...options,
+        chainId: Number(config.public.CHAIN_ID)
+      });
+      const magicSDK = await nuxtApp.$wallet.getMagic();
       const info = await magicSDK.user.getMetadata();
-      // await nuxtApp.$magic.auth.loginWithMagicLink(options);
-      // const info = await nuxtApp.$magic.user.getInfo();
       this.updateUser(info);
       navigateTo('/dashboard');
     },
 
     async logout() {
       const nuxtApp = useNuxtApp();
-      await nuxtApp.$sdk.disconnect();
-      // await nuxtApp.$magic.user.logout();
+      await nuxtApp.$wallet.disconnect();
       this.updateUser();
       navigateTo('/login');
     },
 
     async autoLogin() {
-      const nuxtApp = useNuxtApp();
       try {
-        await nuxtApp.$sdk.autoConnect();
-        const magicSDK = await nuxtApp.$sdk.getMagic();
+        const nuxtApp = useNuxtApp();
+        const config = useRuntimeConfig();
+        await nuxtApp.$wallet.autoConnect({
+          chainId: Number(config.public.CHAIN_ID)
+        });
+        const magicSDK = await nuxtApp.$wallet.getMagic();
         const info = await magicSDK.user.getMetadata();
         this.updateUser(info);
       } catch (e) {
