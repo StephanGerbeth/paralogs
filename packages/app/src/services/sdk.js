@@ -12,18 +12,17 @@ export const isConnected = async () => {
 
 export const getSDK = async () => {
   await isConnected();
-  return ThirdwebSDK.fromSigner(await getWallet().getSigner());
-  // , 'mumbai', {
-  //   gasless: {
-  //     // By specifying a gasless configuration - all transactions will get forwarded to enable gasless transactions
-  //     openzeppelin: {
-  //       relayerUrl:
-  //         'https://api.defender.openzeppelin.com/autotasks/071f3a2d-9887-4226-8592-80aacc7f4493/runs/webhook/3887a917-d587-4992-921f-0ab712d04eaf/XPCTdzEmmyQAT5Uizo1GkC', // your OZ Defender relayer URL
-  //       relayerForwarderAddress: '0xe5e8F3744Fe7EA4bFE4F87Ce3579cA88596277D9' // the OZ defender relayer address (defaults to the standard one)
-  //       // useEOAForwarder: true,
-  //     }
-  //   }
-  // }
+  return ThirdwebSDK.fromSigner(await getWallet().getSigner(), 'mumbai', {
+    gasless: {
+      // By specifying a gasless configuration - all transactions will get forwarded to enable gasless transactions
+      openzeppelin: {
+        relayerUrl:
+          'https://api.defender.openzeppelin.com/autotasks/071f3a2d-9887-4226-8592-80aacc7f4493/runs/webhook/3887a917-d587-4992-921f-0ab712d04eaf/XPCTdzEmmyQAT5Uizo1GkC' // your OZ Defender relayer URL
+        // relayerForwarderAddress: '0xCD0B1D1A2e99c0570dD5b6095afa07B19293c1a4' // the OZ defender relayer address (defaults to the standard one)
+        // useEOAForwarder: true,
+      }
+    }
+  });
 };
 
 export const getMagicSDK = async () => {

@@ -5,7 +5,7 @@
 <script>
 import { gql, useClientHandle } from '@urql/vue';
 import { definePageMeta } from '#imports';
-import { getUserInfo, getContract } from '@/services/sdk';
+import { getUserInfo, getSDK, getContract } from '@/services/sdk';
 import { createLock } from '@/services/sdk/unlock';
 // import { uploadBatch } from '@/services/storage';
 
@@ -39,9 +39,10 @@ export default {
 
   async mounted() {
     console.log(await getUserInfo());
+    console.log(await (await getSDK()).wallet.balance());
 
     const contract = await getContract(
-      '0x68cBE44D0c71A702097db70b99d383e939b39efc'
+      '0x163b3C7c2CE4cF1C82452FBCd1ad556f9DaaFD77'
     );
     contract.events.getAllEvents().then(e => {
       console.log(e);
@@ -51,9 +52,10 @@ export default {
       31 * 60 * 60 * 24,
       0,
       1000,
-      'test title'
+      'schnurz'
     );
     console.log(tx);
+    console.log(await (await getSDK()).wallet.balance());
   }
 };
 </script>
