@@ -1,5 +1,13 @@
 # Project Changelog
 
+## [1.0.7-beta.5](https://github.com/StephanGerbeth/paralogs/compare/v1.0.7-beta.4...v1.0.7-beta.5) (2023-05-29)
+
+
+### Bug Fixes
+
+* **lock:** basics ([3f18a1a](https://github.com/StephanGerbeth/paralogs/commit/3f18a1ae68ef4ec304813e338225627c9c51635d))
+* **meta-tx:** first work meta-tx lock ([48a1499](https://github.com/StephanGerbeth/paralogs/commit/48a14991f4ae8e4e2ed7f6d6e46fbdc368028df3))
+
 ## [1.0.7-beta.4](https://github.com/StephanGerbeth/paralogs/compare/v1.0.7-beta.3...v1.0.7-beta.4) (2023-05-27)
 
 
