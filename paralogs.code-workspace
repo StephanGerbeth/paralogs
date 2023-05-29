@@ -24,7 +24,9 @@
     ],
     "solidity.packageDefaultDependenciesDirectory": "./node_modules",
     "solidity.remappingsUnix": [
-      "@unlock-protocol/=../../node_modules/@unlock-protocol/"
+      "@unlock-protocol/=../../node_modules/@unlock-protocol/",
+      "@openzeppelin/=../../node_modules/@openzeppelin/",
+      "@thirdweb-dev/=../../node_modules/@thirdweb-dev/"
     ],
     "stylelint.validate": [
       "css",
