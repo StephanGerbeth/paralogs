@@ -1,6 +1,6 @@
 {
   "name": "paralogs",
-  "version": "1.0.7-beta.5",
+  "version": "1.0.7-beta.6",
   "private": true,
   "scripts": {
     "pre-commit": "npm run --workspaces pre-commit",

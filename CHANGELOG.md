@@ -1,5 +1,13 @@
 # Project Changelog
 
+## [1.0.7-beta.6](https://github.com/StephanGerbeth/paralogs/compare/v1.0.7-beta.5...v1.0.7-beta.6) (2023-05-30)
+
+
+### Bug Fixes
+
+* **defender:** init ([e9a46ba](https://github.com/StephanGerbeth/paralogs/commit/e9a46ba76b96b9c1eead2da1ad22120f0e606ff7))
+* **gitignore:** ignore build folder ([6733c13](https://github.com/StephanGerbeth/paralogs/commit/6733c130041bf4911727c5f42b2f2fd87e5c428c))
+
 ## [1.0.7-beta.5](https://github.com/StephanGerbeth/paralogs/compare/v1.0.7-beta.4...v1.0.7-beta.5) (2023-05-29)
 
 
