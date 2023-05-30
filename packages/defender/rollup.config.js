@@ -5,9 +5,9 @@ import dotenv from 'rollup-plugin-dotenv';
 import builtins from 'builtin-modules';
 
 export default {
-  input: 'src/autotasks/relay/index.js',
+  input: './src/autotasks/relays/metaTransactions.js',
   output: {
-    file: 'build/relay/index.js',
+    file: './build/relay/index.js',
     format: 'cjs',
     exports: 'auto'
   },

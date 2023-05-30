@@ -1,6 +1,6 @@
 import { ThirdwebSDK } from '@thirdweb-dev/sdk';
 import { resolveContract } from './sdk/contract';
-import { useNuxtApp } from '#app';
+import { useNuxtApp, useRuntimeConfig } from '#app';
 
 export const getWallet = () => {
   return useNuxtApp().$wallet;
@@ -12,12 +12,11 @@ export const isConnected = async () => {
 
 export const getSDK = async () => {
   await isConnected();
+  const config = useRuntimeConfig();
   return ThirdwebSDK.fromSigner(await getWallet().getSigner(), 'mumbai', {
     gasless: {
-      // By specifying a gasless configuration - all transactions will get forwarded to enable gasless transactions
       openzeppelin: {
-        relayerUrl:
-          'https://api.defender.openzeppelin.com/autotasks/071f3a2d-9887-4226-8592-80aacc7f4493/runs/webhook/3887a917-d587-4992-921f-0ab712d04eaf/XPCTdzEmmyQAT5Uizo1GkC' // your OZ Defender relayer URL
+        relayerUrl: config.public.DEFENDER_AUTOTASK_WEBHOOK
         // relayerForwarderAddress: '0xCD0B1D1A2e99c0570dD5b6095afa07B19293c1a4' // the OZ defender relayer address (defaults to the standard one)
         // useEOAForwarder: true,
       }
