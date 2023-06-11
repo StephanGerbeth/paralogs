@@ -1,15 +1,19 @@
 import { fileURLToPath } from 'node:url';
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
+import { defineVitestConfig } from 'nuxt-vitest/config';
 
-export default defineConfig({
-  plugins: [vue()],
+process.server = true;
+export default defineVitestConfig({
   test: {
-    globals: false,
-    environment: 'jsdom',
-    deps: {
-      inline: [/vuetify/]
-    },
-    root: fileURLToPath(new URL('./', import.meta.url))
+    environment: 'nuxt',
+    dir: 'tests',
+    // you can optionally set nuxt-specific environment options
+    environmentOptions: {
+      nuxt: {
+        rootDir: fileURLToPath(new URL('./', import.meta.url)),
+        overrides: {
+          // other nuxt config you want to pass
+        }
+      }
+    }
   }
 });

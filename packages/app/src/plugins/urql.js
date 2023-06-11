@@ -36,7 +36,7 @@ export default defineNuxtPlugin(nuxtApp => {
   // Subscription over Websocket exchange
   const wsClient = createWSClient({
     url: GRAPHQL_API_URL.replace('http', 'ws'),
-    webSocketImpl: process.server && WebSocket
+    webSocketImpl: (process.server || process.env?.VITEST) && WebSocket
   });
   const wsExchange = subscriptionExchange({
     forwardSubscription(operation) {
