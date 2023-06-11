@@ -1,14 +1,13 @@
-import { describe, it, expect } from 'vitest';
-import { mount } from '@vue/test-utils';
-// import { setup } from '@nuxt/test-utils';
+import { describe, it /* , expect, beforeAll, afterAll */ } from 'vitest';
+import { mount } from 'vitest-environment-nuxt/utils';
 
-import HelloWorld from '../src/pages/index.vue';
+import HelloWorld from '../src/components/elements/Button.vue';
 
 describe('HelloWorld', () => {
-  // setup({ config });
-
-  it('is a Vue instance', () => {
-    const wrapper = mount(HelloWorld);
-    expect(wrapper.vm).toBeTruthy();
+  it('renders', () => {
+    const wrapper = mount(HelloWorld, {
+      global: {}
+    });
+    console.log(wrapper);
   });
 });

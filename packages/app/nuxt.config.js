@@ -1,5 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config';
-import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill';
+import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import dotenv from 'dotenv-mono';
 import vuetify from 'vite-plugin-vuetify';
 import { resolve } from 'pathe';
@@ -61,16 +61,23 @@ export default defineNuxtConfig(async () => {
         svgLoader({
           defaultImport: 'component' // or 'raw'
         }),
-        topLevelAwait()
+        topLevelAwait(),
+        nodePolyfills({
+          exclude: [],
+          protocolImports: true
+        })
       ],
       optimizeDeps: {
         esbuildOptions: {
           define: {
             global: 'globalThis'
-          },
-          plugins: [NodeGlobalsPolyfillPlugin()]
+          }
         }
       }
+    },
+
+    resolve: {
+      alias: {}
     },
 
     devServer: {
@@ -82,6 +89,7 @@ export default defineNuxtConfig(async () => {
       '@pinia/nuxt',
       '@pinia-plugin-persistedstate/nuxt',
       '@nuxtjs/fontaine',
+      'nuxt-vitest',
       async (options, nuxt) => {
         nuxt.hooks.hook('vite:extendConfig', config =>
           config.plugins.push(vuetify())

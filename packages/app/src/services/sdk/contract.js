@@ -8,15 +8,15 @@ const createProxy = contract => {
       if (
         target.abi.find(item => item.type === 'function' && item.name === prop)
       ) {
-        return proxyFunctionCall(target.call, prop);
+        return proxyFunctionCall(target.prepare, prop);
       }
       return Reflect.get(...arguments);
     }
   });
 };
 
-const proxyFunctionCall = (call, prop) => {
-  return new Proxy(call, {
+const proxyFunctionCall = (fn, prop) => {
+  return new Proxy(fn, {
     apply(target, thisArgs, args) {
       return target.apply(thisArgs, [prop, args]);
     }

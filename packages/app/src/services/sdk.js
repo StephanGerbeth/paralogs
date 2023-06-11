@@ -13,13 +13,19 @@ export const isConnected = async () => {
 export const getSDK = async () => {
   await isConnected();
   const config = useRuntimeConfig();
-  return ThirdwebSDK.fromSigner(await getWallet().getSigner(), 'mumbai', {
+  return new ThirdwebSDK(await getWallet().getSigner(), {
+    // https://portal.thirdweb.com/typescript/sdk.thirdwebsdk#gasless-optional
     gasless: {
       openzeppelin: {
-        relayerUrl: config.public.DEFENDER_AUTOTASK_WEBHOOK
-        // relayerForwarderAddress: '0xCD0B1D1A2e99c0570dD5b6095afa07B19293c1a4' // the OZ defender relayer address (defaults to the standard one)
+        relayerUrl: config.public.DEFENDER_AUTOTASK_WEBHOOK,
+        relayerForwarderAddress: '0xc82BbE41f2cF04e3a8efA18F7032BDD7f6d98a81'
         // useEOAForwarder: true,
       }
+    },
+    // https://portal.thirdweb.com/typescript/sdk.thirdwebsdk#gassettings-optional
+    gasSettings: {
+      maxPriceInGwei: 1.5,
+      speed: 'fastest' // standard, fast, fastest
     }
   });
 };
