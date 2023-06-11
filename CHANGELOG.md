@@ -1,5 +1,12 @@
 # Project Changelog
 
+## [1.0.7-beta.7](https://github.com/StephanGerbeth/paralogs/compare/v1.0.7-beta.6...v1.0.7-beta.7) (2023-06-11)
+
+
+### Bug Fixes
+
+* **event:** init ([1c03b9e](https://github.com/StephanGerbeth/paralogs/commit/1c03b9e65f85bfb9aaadb290f70a28ae8c8f203d))
+
 ## [1.0.7-beta.6](https://github.com/StephanGerbeth/paralogs/compare/v1.0.7-beta.5...v1.0.7-beta.6) (2023-05-30)
 
 
