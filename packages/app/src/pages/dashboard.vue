@@ -1,5 +1,9 @@
 <template>
-  <div>Dashboard<form-event-editor></form-event-editor></div>
+  <div>
+    Dashboard
+    <form-event-editor></form-event-editor>
+    <module-airport-finder />
+  </div>
 </template>
 
 <script>
@@ -13,10 +17,12 @@ import { createEventMetadata, resolveEventData } from '@/metadata/event';
 // import { getIPFS } from '@/services/ipfs';
 // import { uploadBatch } from '@/services/storage';
 import FormEventEditor from '@/components/collections/FormEventEditor.vue';
+import ModuleAirportFinder from '@/components/modules/AirportFinder.vue';
 
 export default {
   components: {
-    FormEventEditor
+    FormEventEditor,
+    ModuleAirportFinder
   },
   // async setup() {
   //   definePageMeta({
@@ -66,6 +72,15 @@ export default {
     const data = resolveEventData(metadata);
     console.log(data);
     console.log(Intl.DateTimeFormat().resolvedOptions().timeZone);
+
+    // collectAirports({
+    //   minlat: 50.826758482363275,
+    //   maxlat: 56.626020608371924,
+    //   minlon: 6.218261718749999,
+    //   maxlon: 15.49072265625
+    // }).subscribe(e => {
+    //   console.log(e);
+    // });
 
     // console.log(await getUserInfo());
     // console.log(await (await getSDK()).wallet.balance());

@@ -6,6 +6,7 @@ export default defineVitestConfig({
   test: {
     environment: 'nuxt',
     dir: 'tests',
+    setupFiles: ['../tests/setup.js'],
     // you can optionally set nuxt-specific environment options
     environmentOptions: {
       nuxt: {
