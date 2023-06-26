@@ -14,7 +14,7 @@
     "editor.minimap.showSlider": "always",
     "editor.smoothScrolling": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll": true
+      "source.fixAll.eslint": true
     },
     "eslint.validate": [
       "javascript",

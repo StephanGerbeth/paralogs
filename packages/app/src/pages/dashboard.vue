@@ -1,12 +1,16 @@
 <template>
   <div>
     Dashboard
-    <form-event-editor></form-event-editor>
-    <module-airport-finder />
+
+    <input-date-picker v-model="date" />
+    <input-time-picker v-model="date" />
+    <input-duration-picker v-model="end" :start="date" />
+    <input-airport-picker v-model="address" />
+    <input-participant-picker v-model="participants" />
   </div>
 </template>
 
-<script>
+<script setup>
 // import { gql, useClientHandle } from '@urql/vue';
 import { add } from 'date-fns';
 // import { definePageMeta } from '#imports';
@@ -16,14 +20,25 @@ import { add } from 'date-fns';
 import { createEventMetadata, resolveEventData } from '@/metadata/event';
 // import { getIPFS } from '@/services/ipfs';
 // import { uploadBatch } from '@/services/storage';
-import FormEventEditor from '@/components/collections/FormEventEditor.vue';
-import ModuleAirportFinder from '@/components/modules/AirportFinder.vue';
 
+import InputDurationPicker from '@/components/Form/input/DurationPicker';
+import InputTimePicker from '@/components/Form/input/TimePicker';
+import InputDatePicker from '@/components/Form/input/DatePicker';
+import InputAirportPicker from '@/components/Form/input/AirportPicker';
+import InputParticipantPicker from '@/components/Form/input/ParticipantPicker';
+</script>
+
+<script>
 export default {
-  components: {
-    FormEventEditor,
-    ModuleAirportFinder
+  data() {
+    return {
+      date: new Date(),
+      end: new Date(),
+      address: null,
+      participants: 1
+    };
   },
+
   // async setup() {
   //   definePageMeta({
   //     middleware: ['auth']

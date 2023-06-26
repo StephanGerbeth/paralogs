@@ -38,7 +38,9 @@ export default defineNuxtConfig(async () => {
         MAGIC_PUBLISHABLE_KEY: process.env.MAGIC_PUBLISHABLE_KEY,
         CHAIN_ID: process.env.CHAIN_ID,
         GRAPHQL_API_URL: process.env.GRAPHQL_API_URL,
-        DEFENDER_AUTOTASK_WEBHOOK: process.env.DEFENDER_AUTOTASK_WEBHOOK
+        DEFENDER_AUTOTASK_WEBHOOK: process.env.DEFENDER_AUTOTASK_WEBHOOK,
+        GEOAPIFY_URL_IPINFO: process.env.GEOAPIFY_URL_IPINFO,
+        GEOAPIFY_API_KEY: process.env.GEOAPIFY_API_KEY
       }
     },
 

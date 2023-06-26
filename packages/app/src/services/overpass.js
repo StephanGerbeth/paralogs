@@ -10,12 +10,14 @@ const overpassFrontend = new OverpassFrontend(
   }
 );
 
-export const collectAirports = bbox => {
-  if (!bbox?.minlat || !bbox?.maxlat || !bbox?.minlon || !bbox?.maxlon) {
+export const collectAirports = bounds => {
+  if (!bounds?.getSouth) {
     return throwError(() => {
       return new Error('no bbox');
     });
   }
+
+  const bbox = getBBOX(bounds);
 
   if (instance) {
     instance.abort();
@@ -33,14 +35,12 @@ export const collectAirports = bbox => {
       },
       (err, result) => {
         if (err) {
-          console.log('ERROR');
           subscriber.error(err);
         }
         subscriber.next(result);
       },
       err => {
         if (err) {
-          console.log('ERROR 2');
           subscriber.error(err);
         }
         subscriber.complete();
@@ -48,4 +48,13 @@ export const collectAirports = bbox => {
       }
     );
   });
+};
+
+const getBBOX = bounds => {
+  return {
+    minlat: bounds.getSouth(),
+    maxlat: bounds.getNorth(),
+    minlon: bounds.getWest(),
+    maxlon: bounds.getEast()
+  };
 };

@@ -5,6 +5,7 @@
     </v-app-bar>
     <v-main>
       <slot />
+      <div id="teleported"></div>
     </v-main>
   </v-layout>
 </template>
@@ -19,7 +20,7 @@ export default {
 };
 </script>
 
-<style lang="postcss">
+<style scoped>
 body {
   margin: 0;
   color: var(--color-base-foreground);
