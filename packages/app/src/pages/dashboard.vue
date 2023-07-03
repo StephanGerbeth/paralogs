@@ -1,12 +1,12 @@
 <template>
   <div>
     Dashboard
-
-    <input-date-picker v-model="date" />
-    <input-time-picker v-model="date" />
-    <input-duration-picker v-model="end" :start="date" />
-    <input-airport-picker v-model="address" />
-    <input-participant-picker v-model="participants" />
+    <input-aircraft-picker v-model="model.aircraft"></input-aircraft-picker>
+    <input-date-picker v-model="model.start" />
+    <input-time-picker v-model="model.start" />
+    <input-duration-picker v-model="model.end" :start="model.start" />
+    <input-airport-picker v-model="model.airport" />
+    <input-participant-picker v-model="model.participants" />
   </div>
 </template>
 
@@ -21,22 +21,36 @@ import { createEventMetadata, resolveEventData } from '@/metadata/event';
 // import { getIPFS } from '@/services/ipfs';
 // import { uploadBatch } from '@/services/storage';
 
-import InputDurationPicker from '@/components/Form/input/DurationPicker';
-import InputTimePicker from '@/components/Form/input/TimePicker';
-import InputDatePicker from '@/components/Form/input/DatePicker';
-import InputAirportPicker from '@/components/Form/input/AirportPicker';
-import InputParticipantPicker from '@/components/Form/input/ParticipantPicker';
+import InputDurationPicker from '@/components/base/form/picker/DurationPicker';
+import InputTimePicker from '@/components/base/form/picker/TimePicker';
+import InputDatePicker from '@/components/base/form/picker/DatePicker';
+import InputAirportPicker from '@/components/base/form/picker/AirportPicker';
+import InputParticipantPicker from '@/components/base/form/picker/ParticipantPicker';
+// import InputAutocompleteAircrafts from '@/components/base/inputs/AutocompleteAircraftsTest.vue';
+import InputAircraftPicker from '@/components/base/form/picker/AircraftPicker.vue';
 </script>
 
 <script>
 export default {
   data() {
     return {
-      date: new Date(),
-      end: new Date(),
-      address: null,
-      participants: 1
+      model: {
+        start: new Date(),
+        end: new Date(),
+        airport: null,
+        participants: 1,
+        aircraft: null
+      }
     };
+  },
+
+  watch: {
+    model: {
+      handler(value) {
+        console.log('START', value);
+      },
+      deep: true
+    }
   },
 
   // async setup() {

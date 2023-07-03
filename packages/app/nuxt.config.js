@@ -2,6 +2,7 @@ import { defineNuxtConfig } from 'nuxt/config';
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import dotenv from 'dotenv-mono';
 import vuetify from 'vite-plugin-vuetify';
+import { comlink } from 'vite-plugin-comlink';
 import { resolve } from 'pathe';
 import svgLoader from 'vite-svg-loader';
 import topLevelAwait from 'vite-plugin-top-level-await';
@@ -60,6 +61,7 @@ export default defineNuxtConfig(async () => {
 
     vite: {
       plugins: [
+        comlink(),
         svgLoader({
           defaultImport: 'component' // or 'raw'
         }),
@@ -69,6 +71,12 @@ export default defineNuxtConfig(async () => {
           protocolImports: true
         })
       ],
+
+      worker: {
+        format: 'es',
+        plugins: [comlink()]
+      },
+
       optimizeDeps: {
         esbuildOptions: {
           define: {

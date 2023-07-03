@@ -30,12 +30,8 @@ import { mdiCloseCircleOutline } from '@mdi/js';
 
 <script>
 export default {
-  props: {
-    modelValue: {
-      type: [Number, Object, Date, null],
-      required: true
-    }
-  },
+  // eslint-disable-next-line vue/require-prop-types
+  props: ['modelValue'],
 
   emits: ['update:modelValue'],
 
