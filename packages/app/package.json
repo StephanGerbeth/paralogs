@@ -48,7 +48,7 @@
     "graphql-ws": "5.13.1",
     "helia": "1.3.2",
     "ipfs": "0.66.1",
-    "magic-sdk": "17.3.0",
+    "magic-sdk": "18.4.1",
     "nuxt": "3.5.3",
     "orbit-db": "0.29.0",
     "orbit-db-identity-provider": "0.5.0",
