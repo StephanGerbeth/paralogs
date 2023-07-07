@@ -31,7 +31,7 @@
     "@esbuild-plugins/node-modules-polyfill": "0.2.2",
     "@fullhuman/postcss-purgecss": "5.0.0",
     "@magic-ext/auth": "0.4.0",
-    "@magic-ext/webauthn": "11.3.0",
+    "@magic-ext/webauthn": "12.4.1",
     "@nuxtjs/axios": "5.13.6",
     "@nuxtjs/fontaine": "0.4.0",
     "@pinia-plugin-persistedstate/nuxt": "1.1.1",
