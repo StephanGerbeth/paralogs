@@ -4,7 +4,8 @@
     v-model="search"
     :prepend-inner-icon="mdiAirplaneSearch"
     v-bind="props"
-    type="text" />
+    type="text"
+    autofocus />
 </template>
 
 <script setup>

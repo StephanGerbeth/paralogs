@@ -39,12 +39,19 @@ export default {
   computed: {
     model: {
       get() {
-        console.log(this.value);
         return this.value;
       },
 
       set(value) {
         this.$emit('input', value);
+      }
+    }
+  },
+
+  watch: {
+    value: {
+      handler(e) {
+        console.log('Update', e);
       }
     }
   },

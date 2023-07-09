@@ -1,12 +1,14 @@
 <template>
-  <base-dialog v-model="model">
+  <base-dialog :key="model" v-model="model">
     <template #activator="{ props }">
       <base-input-text-field-protected
         v-bind="props"
         :value="model?.tags.name"
         :icon="mdiMapMarkerRadiusOutline"
         type="text"
-        label="Location" />
+        label="Location"
+        clearable
+        @click:clear="onClear" />
     </template>
     <template #default="bind">
       <view-airport-finder v-bind="bind"></view-airport-finder>
@@ -41,6 +43,12 @@ export default {
       set(value) {
         this.$emit('update:modelValue', value);
       }
+    }
+  },
+
+  methods: {
+    onClear() {
+      this.$emit('update:modelValue', null);
     }
   }
 };

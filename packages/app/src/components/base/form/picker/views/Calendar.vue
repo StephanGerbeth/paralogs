@@ -1,5 +1,7 @@
 <template>
-  <v-date-picker v-model="model"></v-date-picker>
+  <v-card>
+    <v-date-picker v-model="model" hide-actions></v-date-picker>
+  </v-card>
 </template>
 
 <script setup>

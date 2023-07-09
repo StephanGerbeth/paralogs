@@ -1,12 +1,13 @@
 <template>
   <div>
     Dashboard
-    <input-aircraft-picker v-model="model.aircraft"></input-aircraft-picker>
+
+    <input-airport-picker v-model="model.airport" />
     <input-date-picker v-model="model.start" />
     <input-time-picker v-model="model.start" />
     <input-duration-picker v-model="model.end" :start="model.start" />
-    <input-airport-picker v-model="model.airport" />
     <input-participant-picker v-model="model.participants" />
+    <input-aircraft-picker v-model="model.aircraft" />
   </div>
 </template>
 
@@ -27,7 +28,7 @@ import InputDatePicker from '@/components/base/form/picker/DatePicker';
 import InputAirportPicker from '@/components/base/form/picker/AirportPicker';
 import InputParticipantPicker from '@/components/base/form/picker/ParticipantPicker';
 // import InputAutocompleteAircrafts from '@/components/base/inputs/AutocompleteAircraftsTest.vue';
-import InputAircraftPicker from '@/components/base/form/picker/AircraftPicker.vue';
+import InputAircraftPicker from '@/components/base/form/picker/AircraftPickerTest.vue';
 </script>
 
 <script>

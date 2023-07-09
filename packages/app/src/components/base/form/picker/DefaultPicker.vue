@@ -2,23 +2,19 @@
   <base-dialog :key="model" v-model="model">
     <template #activator="{ props }">
       <base-input-text-field-protected
-        v-bind="props"
+        v-bind="{ ...props, ...$attrs }"
         :value="model?.registration"
-        :icon="mdiAirplaneSearch"
-        type="text"
-        label="Aircraft"
+        :icon="icon"
         clearable
         @click:clear="onClear" />
     </template>
     <template #default="bind">
-      <view-aircraft-finder v-bind="bind"></view-aircraft-finder>
+      <slot v-bind="bind" />
     </template>
   </base-dialog>
 </template>
 
 <script setup>
-import { mdiAirplaneSearch } from '@mdi/js';
-import ViewAircraftFinder from './views/AircraftFinder';
 import BaseDialog from '@/components/base/Dialog';
 import BaseInputTextFieldProtected from '@/components/base/inputs/TextFieldProtected';
 </script>
@@ -28,6 +24,11 @@ export default {
   props: {
     modelValue: {
       type: [Object, null],
+      required: true
+    },
+
+    icon: {
+      type: String,
       required: true
     }
   },
