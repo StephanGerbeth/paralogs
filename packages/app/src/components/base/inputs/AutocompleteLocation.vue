@@ -11,7 +11,6 @@
     hide-no-data
     hide-details
     label="Ort"
-    autofocus
     @update:search="e => debounce(querySelection(e))">
     <template #prepend-inner>
       <v-btn :icon="mdiCrosshairsGps" @click="onClickLocate">

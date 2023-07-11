@@ -33,7 +33,6 @@ export default {
   emits: ['update:modelValue', 'update:items'],
 
   data() {
-    console.log(this.modelValue);
     return {
       search: this.modelValue?.registration,
       items: [],
@@ -100,6 +99,12 @@ export default {
     console.log(value, props, this.model);
     this.search = this.search || value;
     this.props = props;
+  },
+
+  mounted() {
+    setTimeout(() => {
+      this.$el.querySelector('input').focus();
+    }, 100);
   }
 };
 </script>

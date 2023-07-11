@@ -1,13 +1,13 @@
 <template>
   <div>
     Dashboard
-
-    <input-airport-picker v-model="model.airport" />
+    <dialog-stepper></dialog-stepper>
+    <!-- <input-airport-picker v-model="model.airport" />
     <input-date-picker v-model="model.start" />
     <input-time-picker v-model="model.start" />
     <input-duration-picker v-model="model.end" :start="model.start" />
     <input-participant-picker v-model="model.participants" />
-    <input-aircraft-picker v-model="model.aircraft" />
+    <input-aircraft-picker v-model="model.aircraft" /> -->
   </div>
 </template>
 
@@ -22,13 +22,14 @@ import { createEventMetadata, resolveEventData } from '@/metadata/event';
 // import { getIPFS } from '@/services/ipfs';
 // import { uploadBatch } from '@/services/storage';
 
-import InputDurationPicker from '@/components/base/form/picker/DurationPicker';
-import InputTimePicker from '@/components/base/form/picker/TimePicker';
-import InputDatePicker from '@/components/base/form/picker/DatePicker';
-import InputAirportPicker from '@/components/base/form/picker/AirportPicker';
-import InputParticipantPicker from '@/components/base/form/picker/ParticipantPicker';
+// import InputDurationPicker from '@/components/base/form/picker/DurationPicker';
+// import InputTimePicker from '@/components/base/form/picker/TimePicker';
+// import InputDatePicker from '@/components/base/form/picker/DatePicker';
+// import InputAirportPicker from '@/components/base/form/picker/AirportPicker';
+// import InputParticipantPicker from '@/components/base/form/picker/ParticipantPicker';
 // import InputAutocompleteAircrafts from '@/components/base/inputs/AutocompleteAircraftsTest.vue';
-import InputAircraftPicker from '@/components/base/form/picker/AircraftPickerTest.vue';
+// import InputAircraftPicker from '@/components/base/form/picker/AircraftPickerTest.vue';
+import DialogStepper from '@/components/base/DialogStepper.vue';
 </script>
 
 <script>

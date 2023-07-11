@@ -10,7 +10,6 @@
     hide-no-data
     hide-details
     label="Ort"
-    autofocus
     @update:search="e => debounce(querySelection(e))" />
 </template>
 
@@ -56,8 +55,11 @@ export default {
     }
   },
 
-  mounted() {
-    console.log(searchClient);
+  async mounted() {
+    // document.activeElement.blur();
+    // console.log(searchClient);
+    // await this.$nextTick();
+    // this.$el.focus();
   },
 
   methods: {
