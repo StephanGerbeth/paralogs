@@ -18,10 +18,10 @@
   "dependencies": {
     "@opengsn/contracts": "3.0.0-beta.6",
     "@opengsn/provider": "3.0.0-beta.6",
-    "@openzeppelin/contracts": "4.9.1",
+    "@openzeppelin/contracts": "4.9.2",
     "@openzeppelin/contracts-ethereum-package": "3.0.0",
     "@openzeppelin/test-helpers": "0.5.16",
-    "@thirdweb-dev/sdk": "3.10.21",
+    "@thirdweb-dev/sdk": "3.10.35",
     "@truffle/hdwallet-provider": "2.1.12",
     "@unlock-protocol/contracts": "0.0.22",
     "date-fns": "2.30.0",
@@ -30,14 +30,14 @@
     "rxjs": "7.8.1"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "25.0.1",
+    "@rollup/plugin-commonjs": "25.0.2",
     "@rollup/plugin-json": "6.0.0",
     "@rollup/plugin-node-resolve": "15.1.0",
     "builtin-modules": "3.3.0",
     "defender-autotask-client": "1.44.0",
     "eslint-plugin-truffle": "0.3.1",
     "ethers": "5.7.2",
-    "rollup": "3.25.1",
+    "rollup": "3.26.2",
     "solhint": "3.4.1"
   }
 }
